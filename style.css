@@ -18,19 +18,26 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   background-color: var(--DarkSlateGrey);
+  font-family: "Roboto", sans-serif;
+}
+main{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .container {
   background-color: var(--White);
   padding: 1rem;
-  width: min(90%, 50%);
-  margin: 5rem auto 2rem auto;
+  width: 100%;
+  margin-bottom: 1rem;
   border-radius: var(--border-raduis-all);
+
 }
 .content {
   display: flex;
@@ -144,15 +151,15 @@ input {
 .attribution {
   font-size: 11px;
   text-align: center;
-  color: var(--Tomato);
+  color: var(--White);
 }
 .attribution a {
-  color: var(--rose);
+  color:var(--White);
 }
 @media screen and (max-width: 769px) {
   .container {
     padding: 1rem;
-    width: 90%;
+    width: 300px;
     background: none;
   }
   body {
@@ -160,7 +167,6 @@ input {
   }
   .content {
     flex-direction: column;
-    width: 100%;
   }
   .mob-img {
     display: block;
@@ -177,5 +183,12 @@ input {
   }
   .success-msg button {
     margin-top: 10rem;
+  }
+  .attribution{
+    color: #000;
+  }
+  .attribution a{
+    font-size: 0.8rem;
+    color: #000;
   }
 }
