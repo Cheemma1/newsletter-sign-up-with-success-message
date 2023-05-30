@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --rose: #fc537a;
+  --font-weight: 700;
+  --font-weight-2: 400;
+  --border-raduis-all: 15px;
+  --border-raduis-btn: 7px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: var(--DarkSlateGrey);
+}
+.container {
+  background-color: var(--White);
+  padding: 1rem;
+  width: min(90%, 50%);
+  margin: 5rem auto 2rem auto;
+  border-radius: var(--border-raduis-all);
+}
+.content {
+  display: flex;
+  align-items: center;
+}
+.content img {
+  width: min(100%, 40%);
+}
+
+.content-txt {
+  width: min(100%, 50%);
+  margin: auto;
+}
+.content-txt h1 {
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: var(--font-weight);
+}
+.content-txt p {
+  font-size: 0.9rem;
+  padding-bottom: 0.9rem;
+  font-weight: var(--font-weight-2);
+}
+.content-txt ul {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+.content-txt li {
+  padding: 0.2rem 0 0.2rem 0.5rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-2);
+}
+.content-txt li img {
+  width: 5%;
+}
+
+.content-txt h2 {
+  font-weight: var(--font-weight);
+}
+
+input {
+  margin-bottom: 1rem;
+  border-radius: var(--border-raduis-btn);
+  width: 90%;
+  padding: 0.7rem;
+  outline: none;
+  border: 1px solid var(--DarkSlateGrey);
+}
+.content-txt button {
+  border-radius: var(--border-raduis-btn);
+  width: 90%;
+  padding: 0.7rem;
+  color: var(--White);
+  border: 0;
+  background-color: var(--CharcoalGrey);
+  cursor: pointer;
+}
+.content-txt button:hover,
+.success-msg button:hover {
+  background: linear-gradient(to right, var(--rose), var(--Tomato));
+}
+.txt-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+}
+/* success message container */
+.success-msg {
+  background-color: var(--White);
+  padding: 2rem;
+  width: 320px;
+  margin: 5rem auto 2rem auto;
+  border-radius: var(--border-raduis-all);
+  display: none;
+}
+.success-msg img {
+  width: 10%;
+}
+.success-msg h1 {
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: var(--DarkSlateGrey);
+  font-weight: var(--font-weight);
+}
+.success-msg p {
+  padding-bottom: 1rem;
+  line-height: 1.4;
+}
+.success-msg button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--DarkSlateGrey);
+  border: 0;
+  cursor: pointer;
+  color: var(--White);
+  border-radius: var(--border-raduis-btn);
+}
+
+#error {
+  visibility: hidden;
+  font-weight: var(--font-weight-2);
+  color: red;
+}
+#span-txt {
+  font-weight: var(--font-weight);
+}
+.mob-img {
+  display: none;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--Tomato);
+}
+.attribution a {
+  color: var(--rose);
+}
+@media screen and (max-width: 769px) {
+  .container {
+    padding: 1rem;
+    width: 90%;
+    background: none;
+  }
+  body {
+    background-color: var(--White);
+  }
+  .content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .mob-img {
+    display: block;
+    width: 100%;
+  }
+  .desktop-img {
+    display: none;
+  }
+  .content-img,
+  .content-txt,
+  input,
+  .content-txt button {
+    width: 100%;
+  }
+  .success-msg button {
+    margin-top: 10rem;
+  }
+}
